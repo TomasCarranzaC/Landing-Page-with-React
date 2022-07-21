@@ -1,26 +1,37 @@
 import React from "react";
 
 //include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+//import rigoImage from "../../img/rigo-baby.jpg";
+
+import NavBar from './navbar.jsx';
+import Card from './card.jsx';
+import Footer from './footer.jsx';
+import Jumbotron from "./jumbotron.jsx";
 
 //create your first component
 const Home = () => {
 	return (
-		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
-		</div>
-	);
+		<div className="container-fluid p-0 m-0">
+			<div><NavBar /></div>
+			<div className="row mx-5 mt-4 mb-4 p-0">
+				<Jumbotron />
+			</div>
+			<div className="mx-5 mb-4 d-flex justify-content-between">
+				
+				<Card title="Card1" description="Nulla facilisi. Integer porta venenatis eros porttitor consectetur. Aliquam erat volutpat. In pretium urna dolor, sed interdum ligula suscipit non." buttonLabel="Find Out More!" />
+				
+				<Card title="Card2" description="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout." buttonLabel="Find Out More!" />
+				
+				<Card title="Card3" description="Vivamus quis porttitor massa. Ut in metus eu purus gravida facilisis et in ligula. Proin dapibus, nunc at scelerisque hendrerit." buttonLabel="Find Out More!"/>
+				
+				<Card title="Card4" description="Integer convallis sollicitudin pretium. Donec tincidunt mi sed quam sodales, sit amet pretium massa convallis. Praesent placerat molestie odio eget." buttonLabel="Find Out More!"/>
+				
+			</div>
+			<div className="">
+				<Footer />
+			</div>
+	   </div>
+	   );
 };
 
 export default Home;
